@@ -12,8 +12,18 @@ my_numbers.pop();
 my_numbers.len();
 */
 
+struct Test {
+    score: i32
+}
+
 fn main(){
-    let mut a = vec![1,2,3];
-    a.push(4);
-    println!("{:?}", a.len());
+    let my_scores = vec!{
+        Test{score:90},
+        Test{score:88},
+        Test{score:76},
+        Test{score:45},
+    };
+    for test in my_scores{
+        println!("score = {:?}", test.score);
+    }
 }
